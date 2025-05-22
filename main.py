@@ -478,39 +478,13 @@ async def txt_handler(bot: Client, m: Message):
                 cmd = f'yt-dlp -f "{ytf}" "{url}" -o "{name}.mp4"'
 
             try:  
-                cc = f'**[🎬] 𝗩𝗶𝗱_𝗜𝗱 ➤** {str(count).zfill(3)}\n' \
-     f'**Video Title ➤** {name1} [{res}] Manish Kumar .mp4\n\n' \
-     f'<pre><b>Batch Name ➤</b> {b_name}</pre>\n\n' \
-     f'𝗘𝘅𝘁𝗿𝗮𝗰𝘁𝗲𝗱 𝗕𝘆 ➤  {CR}\n'
-
-cc1 = f'**[📁] 𝗣𝗱𝗳_𝗜𝗱 ➤** {str(count).zfill(3)}\n' \
-      f'**Pdf Title ➤** {name1} Manish Kumar .pdf\n\n' \
-      f'<pre><b>Batch Name ➤</b> {b_name}</pre>\n\n' \
-      f'𝗘𝘅𝘁𝗿𝗮𝗰𝘁𝗲𝗱 𝗕𝘆 ➤  {CR}\n'
-
-cczip = f'**[🗜️] Zip_ID ➤** {str(count).zfill(3)}\n\n' \
-        f'**Zip Title ➤** {name1} {CR} .zip\n\n' \
-        f'<pre><b>Batch Name ➤</b> {b_name}</pre>\n\n' \
-        f'𝗘𝘅𝘁𝗿𝗮𝗰𝘁𝗲𝗱 𝗕𝘆 ➤  {CR}\n'
-
-ccimg = f'——— ✨ [{str(count).zfill(3)}] ✨ ———\n\n' \
-        f'<b>Image Title ➤</b> {name1} {CR} .jpg\n\n' \
-        f'<pre><b>Batch Name ➤</b> {b_name}</pre>\n\n' \
-        f'𝗘𝘅𝘁𝗿𝗮𝗰𝘁𝗲𝗱 𝗕𝘆 ➤  {CR}\n'
-
-cccpvod = f'——— ✨ [{str(count).zfill(3)}] ✨ ———\n\n' \
-          f'🎞️𝐓𝐢𝐭𝐥𝐞 » `{name1}` [{CR}] .mp4\n\n' \
-          f'Click Here to Watch Stream: {urlcpvod}\n' \
-          f'🔗𝐋𝐢𝐧𝐤 » {link0}\n\n' \
-          f'<pre><code>📚 Course : {b_name}</code></pre>\n\n' \
-          f'🌟𝐄𝐱𝐭𝐫𝐚𝐜𝐭𝐞𝐝 𝐁𝐲 » {CR}\n'
-
-ccyt = f'——— ✨ [{str(count).zfill(3)}] ✨ ———\n\n' \
-       f'🎞️𝐓𝐢𝐭𝐥𝐞 » `{name1}` [{CR}] .mp4\n\n' \
-       f'Click Here to Watch Stream: {url}\n\n' \
-       f'<pre><code>📚 Course : {b_name}</code></pre>\n\n' \
-       f'🌟𝐄𝐱𝐭𝐫𝐚𝐜𝐭𝐞𝐝 𝐁𝐲 » {CR}\n'
-
+                cc = f'**<a href="https://t.me/Manish_0139">[🎬] 𝗩𝗶𝗱_𝗜𝗱 ➤**</a><a href="https://t.me/Manish_0139">{str(count).zfill(3)}<a/>**\n**<a href="https://t.me/saini_sahab19"><b>Video Title</b> ➤</a> <a href="https://t.me/saini_sahab19">**{name1}** **[{res}]**</a> <a href="https://t.me/Manish_0139">Manish Kumar </a><a href="https://t.me/saini_sahab19"> **.mp4**</a>\n\n<pre><a href="https://t.me/saini_sahab19">**Batch Name** ➤</a> **{b_name}**</pre>\n\n<a href="https://t.me/saini_sahab19">𝗘𝘅𝘁𝗿𝗮𝗰𝘁𝗲𝗱 𝗕𝘆 ➤</a>  **{CR}**\n'
+                cc1 =  f'<a href="https://t.me/Manish_0139">**[📁] 𝗣𝗱𝗳_𝗜𝗱 ➤**</a><a href="https://t.me/saini_sahab19"> {str(count).zfill(3)}</a>**\n**<a href="https://t.me/saini_sahab19"><b> Pdf Title</b> ➤</a> <a href="https://t.me/saini_sahab19">**{name1}**</a> <a href="https://t.me/Manish_0139">Manish Kumar </a> <a href="https://t.me/saini_sahab19">**.pdf**</a>\n\n<pre><a href="https://t.me/saini_sahab19">**Batch Name** ➤ </a>**{b_name}**</pre>\n\n<a href="https://t.me/saini_sahab19">𝗘𝘅𝘁𝗿𝗮𝗰𝘁𝗲𝗱 𝗕𝘆 ➤ </a> **{CR}**\n'
+                cczip = f'<a href="https://t.me/Manish_0139">**Zip_ID ➤**[{str(count).zfill(3)}]</a> \n\n<a href="https://t.me/saini_sahab19"><b> Zip Title</b> ➤ **{name1}** **{CR}** **.zip</a>**\n\n<pre>**Batch Name** ➤ **{b_name}**</pre>\n\n𝗘𝘅𝘁𝗿𝗮𝗰𝘁𝗲𝗱 𝗕𝘆 ➤  **{CR}**\n'  
+                ccimg = f'——— ✨ [{str(count).zfill(3)}]({link0}) ✨ ———\n\n<b> Image Title</b> ➤ **{name1}** **{CR}** **.jpg**\n\n<pre>**Batch Name** ➤ **{b_name}**</pre>\n\n𝗘𝘅𝘁𝗿𝗮𝗰𝘁𝗲𝗱 𝗕𝘆 ➤  **{CR}**\n'
+                cccpvod = f'——— ✨ [{str(count).zfill(3)}]({link0}) ✨ ———\n\n🎞️𝐓𝐢𝐭𝐥𝐞 » `{name1}` [{CR}] .mp4\n\n<a href="{urlcpvod}">__**Click Here to Watch Stream**__</a>\n🔗𝐋𝐢𝐧𝐤 » {link0}\n\n<pre><code>📚 Course : {b_name}</code></pre>\n\n🌟𝐄𝐱𝐭𝐫𝐚𝐜𝐭𝐞𝐝 𝐁𝐲 » {CR}\n'
+                ccyt = f'——— ✨ [{str(count).zfill(3)}]({link0}) ✨ ———\n\n🎞️𝐓𝐢𝐭𝐥𝐞 » `{name1}` [{CR}] .mp4\n\n<a href="{url}">__**Click Here to Watch Stream**__</a>\n\n<pre><code>📚 Course : {b_name}</code></pre>\n\n🌟𝐄𝐱𝐭𝐫𝐚𝐜𝐭𝐞𝐝 𝐁𝐲 » {CR}\n'
+                                 
                 if "drive" in url:
                     try:
                         ka = await helper.download(url, name)
@@ -737,7 +711,7 @@ async def txt_handler(bot: Client, m: Message):
                     time.sleep(1)
 
             except Exception as e:
-                await m.reply_text(f'——— ✨ [{str(count).zfill(3)}]({link0}) ✨ ———\nYou can manually Check.\n\n📔𝐓𝐢𝐭𝐥𝐞 » `{name}`\n🔗𝐋𝐢𝐧𝐤 » <a href="{link0}">__**Click Here to See Link**__</a>\n\n✦𝐁𝐨𝐭 𝐌𝐚𝐝𝐞 𝐁𝐲 ✦ <b> @Manish_0139 </b>')
+                await m.reply_text(f'——— ✨ [{str(count).zfill(3)}]({link0}) ✨ ———\nYou can manually Check.\n\n📔𝐓𝐢𝐭𝐥𝐞 » `{name}`\n🔗𝐋𝐢𝐧𝐤 » <a href="{link0}">__**Click Here to See Link**__</a>\n\n✦𝐁𝐨𝐭 𝐌𝐚𝐝𝐞 𝐁𝐲 ✦ <b> @SAINI_SAHAB19 </b>')
                 count += 1
                 continue
 
