@@ -27,16 +27,16 @@ from pyrogram.errors.exceptions.bad_request_400 import StickerEmojiInvalid
 from pyrogram.types.messages_and_media import message
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 
-photologo = 'https://telegra.ph/file/e91729341175f7e6c4e7e.png'
-photoyt = 'https://telegra.ph/file/e91729341175f7e6c4e7e.png'
-photocp = 'https://telegra.ph/file/e91729341175f7e6c4e7e.png'
+photologo = 'https://tinypic.host/image/1000123171.3Koddw'
+photoyt = 'https://tinypic.host/image/1000123171.3Koddw'
+photocp = 'https://tinypic.host/image/1000123171.3Koddw'
 
 async def show_random_emojis(message):
     emojis = ['🐼', '🐶', '🐅', '⚡️', '🚀', '✨', '💥', '☠️', '🥂', '🍾']
     emoji_message = await message.reply_text(' '.join(random.choices(emojis, k=1)))
     return emoji_message
     
-credit ="𝙎𝘼𝙄𝙉𝙄 𝙎𝘼𝙃𝘼𝘽" 
+credit ="Manish Kumar" 
 # Initialize the bot
 bot = Client(
     "bot",
@@ -116,8 +116,8 @@ import random
 keyboard = InlineKeyboardMarkup(
     [
         [
-            InlineKeyboardButton(text="📞 Contact", url="https://t.me/saini_sahab19"),
-            InlineKeyboardButton(text="🛠️ Help", url="https://t.me/saini_sahab19"),
+            InlineKeyboardButton(text="📞 Contact", url="https://t.me/Manish_0139"),
+            InlineKeyboardButton(text="🛠️ Help", url="https://t.me/+sjGGT5ughqYxYmVl"),
         ],
     ]
 )
@@ -126,16 +126,16 @@ keyboard = InlineKeyboardMarkup(
 Busy = InlineKeyboardMarkup(
     [
         [
-            InlineKeyboardButton(text="📞 Contact", url="https://t.me/saini_sahab19"),
-            InlineKeyboardButton(text="🛠️ Help", url="https://t.me/saini_sahab19"),
+            InlineKeyboardButton(text="📞 Contact", url="https://t.me/Manish_0139"),
+            InlineKeyboardButton(text="🛠️ Help", url="https://t.me/+sjGGT5ughqYxYmVl"),
         ],
     ]
 )
 
 # Image URLs for the random image feature
 image_urls = [
-    "https://telegra.ph/file/e91729341175f7e6c4e7e.png",
-    "https://telegra.ph/file/e91729341175f7e6c4e7e.png",
+    "https://tinypic.host/image/1000123171.3Koddw",
+    "https://tinypic.host/image/1000123171.3Koddw",
     # Add more image URLs as needed
 ]
 
@@ -144,9 +144,9 @@ cookies_file_path= "youtube_cookies.txt"
 @bot.on_message(filters.command(["help"]))
 async def txt_handler(client: Client, m: Message):
     await bot.send_message(m.chat.id, text= (
-        "<pre><code> 🎉Congrats! You are using 𝙎𝘼𝙄𝙉𝙄 𝘽𝙊𝙏𝙎:</code></pre>\n┣\n"
+        "<pre><code> 🎉Congrats! You are using Manish's Bot:</code></pre>\n┣\n"
         "┣⪼01. Send /start - To Check Bot \n┣\n"
-        "┣⪼02. Send /saini - for extract txt file\n┣\n"
+        "┣⪼02. Send /Manish - for extract txt file\n┣\n"
         "┣⪼03. Send /cp - for stream txt file\n┣\n"
         "┣⪼04. Send /y2t - YouTube to .txt Convert\n┣\n"
         "┣⪼05. Send /logs - To see Bot Working Logs\n┣\n"
@@ -197,7 +197,7 @@ async def cookies_handler(client: Client, m: Message):
 async def start_command(bot: Client, message: Message):
     random_image_url = random.choice(image_urls)
     caption = (
-        "𝐇𝐞𝐥𝐥𝐨 𝐃𝐞𝐚𝐫 👋!\n\n➠ 𝐈 𝐚𝐦 𝐚 𝐓𝐞𝐱𝐭 𝐃𝐨𝐰𝐧𝐥𝐨𝐚𝐝𝐞𝐫 𝐁𝐨𝐭\n\n➠ Can Extract Videos & PDFs From Your Text File and Upload to Telegram!\n\n➠ For Guide Use Command /help 📖\n\n➠ 𝐌𝐚𝐝𝐞 𝐁𝐲 : <b> @SAINI_SAHAB19 </b>"
+        "𝐇𝐞𝐥𝐥𝐨 𝐃𝐞𝐚𝐫 👋!\n\n➠ 𝐈 𝐚𝐦 𝐚 𝐓𝐞𝐱𝐭 𝐃𝐨𝐰𝐧𝐥𝐨𝐚𝐝𝐞𝐫 𝐁𝐨𝐭\n\n➠ Can Extract Videos & PDFs From Your Text File and Upload to Telegram!\n\n➠ For Guide Use Command /help 📖\n\n➠ 𝐌𝐚𝐝𝐞 𝐁𝐲 : <b> @Manish_0139 </b>"
     )
 
     await bot.send_photo(
@@ -301,14 +301,14 @@ async def youtube_to_txt(client, message: Message):
     # Remove the temporary text file after sending
     os.remove(txt_file)
 
-@bot.on_message(filters.command(["saini"]) )
+@bot.on_message(filters.command(["Manish"]) )
 async def txt_handler(bot: Client, m: Message):
     editable = await m.reply_text(f"<pre><code>🔹Hi I am Poweful TXT Downloader📥 Bot.\n🔹Send me the TXT file and wait.</code></pre>")
     input: Message = await bot.listen(editable.chat.id)
     x = await input.download()
     
     file_name, ext = os.path.splitext(os.path.basename(x))
-    credit = f"<b> @SAINI_SAHAB19 </b>"
+    credit = f"<b> @Manish_0139 </b>"
     pdf_count = 0
     img_count = 0
     zip_count = 0
@@ -355,7 +355,7 @@ async def txt_handler(bot: Client, m: Message):
     else:
         b_name = raw_text0
 
-    await editable.edit("╭━━━━❰ᴇɴᴛᴇʀ ʀᴇꜱᴏʟᴜᴛɪᴏɴ❱━━➣ \n┣━━⪼ send `144`  for 144p\n┣━━⪼ send `240`  for 240p\n┣━━⪼ send `360`  for 360p\n┣━━⪼ send `480`  for 480p\n┣━━⪼ send `720`  for 720p\n┣━━⪼ send `1080` for 1080p\n╰━━⌈⚡[<b> @SAINI_SAHAB19 </b>]⚡⌋━━➣")
+    await editable.edit("╭━━━━❰ᴇɴᴛᴇʀ ʀᴇꜱᴏʟᴜᴛɪᴏɴ❱━━➣ \n┣━━⪼ send `144`  for 144p\n┣━━⪼ send `240`  for 240p\n┣━━⪼ send `360`  for 360p\n┣━━⪼ send `480`  for 480p\n┣━━⪼ send `720`  for 720p\n┣━━⪼ send `1080` for 1080p\n╰━━⌈⚡[<b> @Manish_0139 </b>]⚡⌋━━➣")
     input2: Message = await bot.listen(editable.chat.id)
     raw_text2 = input2.text
     quality = f"{raw_text2}p"
@@ -383,9 +383,9 @@ async def txt_handler(bot: Client, m: Message):
     raw_text3 = input3.text
     await input3.delete(True)
     # Default credit message
-    credit = '<a href="https://t.me/saini_sahab19">𝙎𝘼𝙄𝙉𝙄 𝙎𝘼𝙃𝘼𝘽 </a>'
+    credit = '<a href="https://t.me/saini_sahab19">Manish Kumar </a>'
     if raw_text3 == '1':
-        CR = '<a href="https://t.me/saini_sahab19">𝙎𝘼𝙄𝙉𝙄 𝙎𝘼𝙃𝘼𝘽 </a>'
+        CR = '<a href="https://t.me/saini_sahab19">Manish Kumar </a>'
     elif raw_text3:
         CR = raw_text3
     else:
@@ -415,7 +415,7 @@ async def txt_handler(bot: Client, m: Message):
         thumb = raw_text6
 
     await m.reply_text(
-        f'<pre><a href="https://t.me/saini_sahab19">🎯Target Batch ➤</a> {b_name}</pre>'
+        f'<pre><a href="https://t.me/Manish_0139">🎯Target Batch ➤</a> {b_name}</pre>'
     )
 
     failed_count = 0
@@ -478,13 +478,39 @@ async def txt_handler(bot: Client, m: Message):
                 cmd = f'yt-dlp -f "{ytf}" "{url}" -o "{name}.mp4"'
 
             try:  
-                cc = f'**<a href="https://t.me/saini_sahab19">[🎬] 𝗩𝗶𝗱_𝗜𝗱 ➤**</a><a href="https://t.me/saini_sahab19">{str(count).zfill(3)}<a/>**\n**<a href="https://t.me/saini_sahab19"><b>Video Title</b> ➤</a> <a href="https://t.me/saini_sahab19">**{name1}** **[{res}]**</a> <a href="https://t.me/saini_sahab19">𝙎𝘼𝙄𝙉𝙄 𝙎𝘼𝙃𝘼𝘽 </a><a href="https://t.me/saini_sahab19"> **.mp4**</a>\n\n<pre><a href="https://t.me/saini_sahab19">**Batch Name** ➤</a> **{b_name}**</pre>\n\n<a href="https://t.me/saini_sahab19">𝗘𝘅𝘁𝗿𝗮𝗰𝘁𝗲𝗱 𝗕𝘆 ➤</a>  **{CR}**\n'
-                cc1 =  f'<a href="https://t.me/saini_sahab19">**[📁] 𝗣𝗱𝗳_𝗜𝗱 ➤**</a><a href="https://t.me/saini_sahab19"> {str(count).zfill(3)}</a>**\n**<a href="https://t.me/saini_sahab19"><b> Pdf Title</b> ➤</a> <a href="https://t.me/saini_sahab19">**{name1}**</a> <a href="https://t.me/saini_sahab19">𝙎𝘼𝙄𝙉𝙄 𝙎𝘼𝙃𝘼𝘽 </a> <a href="https://t.me/saini_sahab19">**.pdf**</a>\n\n<pre><a href="https://t.me/saini_sahab19">**Batch Name** ➤ </a>**{b_name}**</pre>\n\n<a href="https://t.me/saini_sahab19">𝗘𝘅𝘁𝗿𝗮𝗰𝘁𝗲𝗱 𝗕𝘆 ➤ </a> **{CR}**\n'
-                cczip = f'<a href="https://t.me/saini_sahab19">**Zip_ID ➤**[{str(count).zfill(3)}]</a> \n\n<a href="https://t.me/saini_sahab19"><b> Zip Title</b> ➤ **{name1}** **{CR}** **.zip</a>**\n\n<pre>**Batch Name** ➤ **{b_name}**</pre>\n\n𝗘𝘅𝘁𝗿𝗮𝗰𝘁𝗲𝗱 𝗕𝘆 ➤  **{CR}**\n'  
-                ccimg = f'——— ✨ [{str(count).zfill(3)}]({link0}) ✨ ———\n\n<b> Image Title</b> ➤ **{name1}** **{CR}** **.jpg**\n\n<pre>**Batch Name** ➤ **{b_name}**</pre>\n\n𝗘𝘅𝘁𝗿𝗮𝗰𝘁𝗲𝗱 𝗕𝘆 ➤  **{CR}**\n'
-                cccpvod = f'——— ✨ [{str(count).zfill(3)}]({link0}) ✨ ———\n\n🎞️𝐓𝐢𝐭𝐥𝐞 » `{name1}` [{CR}] .mp4\n\n<a href="{urlcpvod}">__**Click Here to Watch Stream**__</a>\n🔗𝐋𝐢𝐧𝐤 » {link0}\n\n<pre><code>📚 Course : {b_name}</code></pre>\n\n🌟𝐄𝐱𝐭𝐫𝐚𝐜𝐭𝐞𝐝 𝐁𝐲 » {CR}\n'
-                ccyt = f'——— ✨ [{str(count).zfill(3)}]({link0}) ✨ ———\n\n🎞️𝐓𝐢𝐭𝐥𝐞 » `{name1}` [{CR}] .mp4\n\n<a href="{url}">__**Click Here to Watch Stream**__</a>\n\n<pre><code>📚 Course : {b_name}</code></pre>\n\n🌟𝐄𝐱𝐭𝐫𝐚𝐜𝐭𝐞𝐝 𝐁𝐲 » {CR}\n'
-                                 
+                cc = f'**[🎬] 𝗩𝗶𝗱_𝗜𝗱 ➤** {str(count).zfill(3)}\n' \
+     f'**Video Title ➤** {name1} [{res}] Manish Kumar .mp4\n\n' \
+     f'<pre><b>Batch Name ➤</b> {b_name}</pre>\n\n' \
+     f'𝗘𝘅𝘁𝗿𝗮𝗰𝘁𝗲𝗱 𝗕𝘆 ➤  {CR}\n'
+
+cc1 = f'**[📁] 𝗣𝗱𝗳_𝗜𝗱 ➤** {str(count).zfill(3)}\n' \
+      f'**Pdf Title ➤** {name1} Manish Kumar .pdf\n\n' \
+      f'<pre><b>Batch Name ➤</b> {b_name}</pre>\n\n' \
+      f'𝗘𝘅𝘁𝗿𝗮𝗰𝘁𝗲𝗱 𝗕𝘆 ➤  {CR}\n'
+
+cczip = f'**[🗜️] Zip_ID ➤** {str(count).zfill(3)}\n\n' \
+        f'**Zip Title ➤** {name1} {CR} .zip\n\n' \
+        f'<pre><b>Batch Name ➤</b> {b_name}</pre>\n\n' \
+        f'𝗘𝘅𝘁𝗿𝗮𝗰𝘁𝗲𝗱 𝗕𝘆 ➤  {CR}\n'
+
+ccimg = f'——— ✨ [{str(count).zfill(3)}] ✨ ———\n\n' \
+        f'<b>Image Title ➤</b> {name1} {CR} .jpg\n\n' \
+        f'<pre><b>Batch Name ➤</b> {b_name}</pre>\n\n' \
+        f'𝗘𝘅𝘁𝗿𝗮𝗰𝘁𝗲𝗱 𝗕𝘆 ➤  {CR}\n'
+
+cccpvod = f'——— ✨ [{str(count).zfill(3)}] ✨ ———\n\n' \
+          f'🎞️𝐓𝐢𝐭𝐥𝐞 » `{name1}` [{CR}] .mp4\n\n' \
+          f'Click Here to Watch Stream: {urlcpvod}\n' \
+          f'🔗𝐋𝐢𝐧𝐤 » {link0}\n\n' \
+          f'<pre><code>📚 Course : {b_name}</code></pre>\n\n' \
+          f'🌟𝐄𝐱𝐭𝐫𝐚𝐜𝐭𝐞𝐝 𝐁𝐲 » {CR}\n'
+
+ccyt = f'——— ✨ [{str(count).zfill(3)}] ✨ ———\n\n' \
+       f'🎞️𝐓𝐢𝐭𝐥𝐞 » `{name1}` [{CR}] .mp4\n\n' \
+       f'Click Here to Watch Stream: {url}\n\n' \
+       f'<pre><code>📚 Course : {b_name}</code></pre>\n\n' \
+       f'🌟𝐄𝐱𝐭𝐫𝐚𝐜𝐭𝐞𝐝 𝐁𝐲 » {CR}\n'
+
                 if "drive" in url:
                     try:
                         ka = await helper.download(url, name)
@@ -607,7 +633,7 @@ async def txt_handler(bot: Client, m: Message):
                            f"┣🍁𝐐𝐮𝐚𝐥𝐢𝐭𝐲 » {raw_text2}p\n┃\n" \
                            f'┣━🔗𝐋𝐢𝐧𝐤 » <a href="{link0}">__**Click Here to Open Link**__</a>\n┃\n' \
                            f'╰━━🖼️𝐓𝐡𝐮𝐦𝐛𝐧𝐚𝐢𝐥 » <a href="{raw_text6}">__**Thumb Link**__</a>\n\n' \
-                           f'✦𝐁𝐨𝐭 𝐌𝐚𝐝𝐞 𝐁𝐲 ✦ <a href="https://t.me/saini_sahab19">𝙎𝘼𝙄𝙉𝙄 𝙎𝘼𝙃𝘼𝘽 </a>'
+                           f'✦𝐁𝐨𝐭 𝐌𝐚𝐝𝐞 𝐁𝐲 ✦ <a href="https://t.me/Manish_0139">Manish Kumar </a>'
                     prog = await m.reply_text(Show, disable_web_page_preview=True)
                     res_file = await helper.download_video(url, cmd, name)
                     filename = res_file
@@ -619,7 +645,7 @@ async def txt_handler(bot: Client, m: Message):
 
             except Exception as e:
                 await m.reply_text(
-                    f'——— ✨ [{str(count).zfill(3)}]({link0}) ✨ ———\n\n📔𝐓𝐢𝐭𝐥𝐞 » `{name}`\n🔗𝐋𝐢𝐧𝐤 » <a href="{link0}">__**Click Here to check manually**__</a>\n\n✦𝐁𝐨𝐭 𝐌𝐚𝐝𝐞 𝐁𝐲 ✦ <a href="https://t.me/saini_sahab19">𝙎𝘼𝙄𝙉𝙄 𝙎𝘼𝙃𝘼𝘽 </a>'
+                    f'——— ✨ [{str(count).zfill(3)}]({link0}) ✨ ———\n\n📔𝐓𝐢𝐭𝐥𝐞 » `{name}`\n🔗𝐋𝐢𝐧𝐤 » <a href="{link0}">__**Click Here to check manually**__</a>\n\n✦𝐁𝐨𝐭 𝐌𝐚𝐝𝐞 𝐁𝐲 ✦ <a href="https://t.me/Manish_0139">Manish Kumar</a>'
                 )
                 count += 1
                 failed_count += 1
@@ -638,7 +664,7 @@ async def txt_handler(bot: Client, m: Message):
                        f'🔹𝗩𝗶𝗱𝗲𝗼 » {video_count}\n🔹𝗣𝗱𝗳 » {pdf_count}\n🔹𝗜𝗺𝗴 » {img_count}\n🔹𝗭𝗶𝗽 » {zip_count}\n🔹𝗙𝗮𝗶𝗹𝗲𝗱 𝗨𝗿𝗹 » {failed_count}\n\n'
                        f'▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n'
                        f'✅𝗦𝗧𝗔𝗧𝗨𝗦 » 𝗖𝗢𝗠𝗣𝗟𝗘𝗧𝗘𝗗</a>')
-    await m.reply_text('📥𝗘𝘅𝘁𝗿𝗮𝗰𝘁𝗲𝗱 𝗕𝘆 ➤ <a href="https://t.me/saini_sahab19">𝙎𝘼𝙄𝙉𝙄 𝙎𝘼𝙃𝘼𝘽 </a><a href="https://t.me/saini_sahab19">𝙎𝘼𝙄𝙉𝙄 𝙎𝘼𝙃𝘼𝘽 </a>')
+    await m.reply_text('📥𝗘𝘅𝘁𝗿𝗮𝗰𝘁𝗲𝗱 𝗕𝘆 ➤ <a href="https://t.me/Manish_0139">Manish Kumar </a><a href="https://t.me/Manish_0139">Manish Kumar  </a>')
     await m.reply_text(f'<a href="https://t.me/saini_sahab19">『😏𝗥𝗲𝗮𝗰𝘁𝗶𝗼𝗻 𝗞𝗼𝗻 𝗗𝗲𝗴𝗮😏』</a>')                 
 
 @bot.on_message(filters.command(["cp"]) )
@@ -648,7 +674,7 @@ async def txt_handler(bot: Client, m: Message):
     x = await input.download()
     await input.delete(True)
     file_name, ext = os.path.splitext(os.path.basename(x))
-    credit = f"<b> @SAINI_SAHAB19 </b>"
+    credit = f"<b> @Manish_0139 </b>"
     try:    
         with open(x, "r") as f:
             content = f.read()
@@ -683,7 +709,7 @@ async def txt_handler(bot: Client, m: Message):
                                 
                 if ".pdf" in url or "drive" in url:
                     try:
-                        await m.reply_text(f'——— ✨ [{str(count).zfill(3)}]({link0}) ✨ ———\n\n📔𝐓𝐢𝐭𝐥𝐞 » `{name}`\n🔗𝐋𝐢𝐧𝐤 » <a href="{link0}">__**Click Here to Download**__</a>\n\n✦𝐁𝐨𝐭 𝐌𝐚𝐝𝐞 𝐁𝐲 ✦ <b> @SAINI_SAHAB19 </b>')
+                        await m.reply_text(f'——— ✨ [{str(count).zfill(3)}]({link0}) ✨ ———\n\n📔𝐓𝐢𝐭𝐥𝐞 » `{name}`\n🔗𝐋𝐢𝐧𝐤 » <a href="{link0}">__**Click Here to Download**__</a>\n\n✦𝐁𝐨𝐭 𝐌𝐚𝐝𝐞 𝐁𝐲 ✦ <b> @Manish_0139 </b>')
                         count +=1
                     except Exception as e:
                         await m.reply_text(str(e))    
@@ -692,7 +718,7 @@ async def txt_handler(bot: Client, m: Message):
 
                 elif "classplusapp.com" in url or "youtu" in url:
                     try:
-                        await m.reply_text(f'——— ✨ [{str(count).zfill(3)}]({link0}) ✨ ———\n\n📔𝐓𝐢𝐭𝐥𝐞 » `{name}`\n🔗𝐋𝐢𝐧𝐤 » <a href="{link0}">__**Click Here to Watch Stream**__</a>\n\n✦𝐁𝐨𝐭 𝐌𝐚𝐝𝐞 𝐁𝐲 ✦ <b> @SAINI_SAHAB19 </b>')
+                        await m.reply_text(f'——— ✨ [{str(count).zfill(3)}]({link0}) ✨ ———\n\n📔𝐓𝐢𝐭𝐥𝐞 » `{name}`\n🔗𝐋𝐢𝐧𝐤 » <a href="{link0}">__**Click Here to Watch Stream**__</a>\n\n✦𝐁𝐨𝐭 𝐌𝐚𝐝𝐞 𝐁𝐲 ✦ <b> @Manish_0139</b>')
                         count +=1
                     except Exception as e:
                         await m.reply_text(str(e))    
@@ -700,7 +726,7 @@ async def txt_handler(bot: Client, m: Message):
                         continue              
                 
                 else:
-                    Show = f"<pre><code>⚡Dᴏᴡɴʟᴏᴀᴅ Sᴛᴀʀᴛᴇᴅ...⏳\n✦𝐁𝐨𝐭 𝐌𝐚𝐝𝐞 𝐁𝐲 ✦ <b> @SAINI_SAHAB19 </b></code></pre>"
+                    Show = f"<pre><code>⚡Dᴏᴡɴʟᴏᴀᴅ Sᴛᴀʀᴛᴇᴅ...⏳\n✦𝐁𝐨𝐭 𝐌𝐚𝐝𝐞 𝐁𝐲 ✦ <b> @Manish_0139 </b></code></pre>"
                     prog = await m.reply_text(Show, disable_web_page_preview=True)
                     res_file = await helper.download_video(url, cmd, name)
                     filename = res_file
@@ -711,13 +737,13 @@ async def txt_handler(bot: Client, m: Message):
                     time.sleep(1)
 
             except Exception as e:
-                await m.reply_text(f'——— ✨ [{str(count).zfill(3)}]({link0}) ✨ ———\nYou can manually Check.\n\n📔𝐓𝐢𝐭𝐥𝐞 » `{name}`\n🔗𝐋𝐢𝐧𝐤 » <a href="{link0}">__**Click Here to See Link**__</a>\n\n✦𝐁𝐨𝐭 𝐌𝐚𝐝𝐞 𝐁𝐲 ✦ <b> @SAINI_SAHAB19 </b>')
+                await m.reply_text(f'——— ✨ [{str(count).zfill(3)}]({link0}) ✨ ———\nYou can manually Check.\n\n📔𝐓𝐢𝐭𝐥𝐞 » `{name}`\n🔗𝐋𝐢𝐧𝐤 » <a href="{link0}">__**Click Here to See Link**__</a>\n\n✦𝐁𝐨𝐭 𝐌𝐚𝐝𝐞 𝐁𝐲 ✦ <b> @Manish_0139 </b>')
                 count += 1
                 continue
 
     except Exception as e:
         await m.reply_text(e)
-    await m.reply_text("<pre><code>Converted By ⌈✨『<b> @SAINI_SAHAB19 </b>』✨⌋</code></pre>")
+    await m.reply_text("<pre><code>Converted By ⌈✨『<b> @Manish_0139 </b>』✨⌋</code></pre>")
 
 
 @bot.on_message(filters.text & filters.private)
@@ -735,7 +761,7 @@ async def text_handler(bot: Client, m: Message):
     editable = await m.reply_text(f"<pre><code>**🔹Processing your link...\n🔁Please wait...⏳**</code></pre>")
     await m.delete()
 
-    await editable.edit("<pre><code>╭━━━━❰ᴇɴᴛᴇʀ ʀᴇꜱᴏʟᴜᴛɪᴏɴ❱━━➣ </code></pre>\n┣━━⪼ send `144`  for 144p\n┣━━⪼ send `240`  for 240p\n┣━━⪼ send `360`  for 360p\n┣━━⪼ send `480`  for 480p\n┣━━⪼ send `720`  for 720p\n┣━━⪼ send `1080` for 1080p\n<pre><code>╰━━⌈⚡[<b> @SAINI_SAHAB19 </b>]⚡⌋━━➣ </code></pre>")
+    await editable.edit("<pre><code>╭━━━━❰ᴇɴᴛᴇʀ ʀᴇꜱᴏʟᴜᴛɪᴏɴ❱━━➣ </code></pre>\n┣━━⪼ send `144`  for 144p\n┣━━⪼ send `240`  for 240p\n┣━━⪼ send `360`  for 360p\n┣━━⪼ send `480`  for 480p\n┣━━⪼ send `720`  for 720p\n┣━━⪼ send `1080` for 1080p\n<pre><code>╰━━⌈⚡[<b> @Manish_0139 </b>]⚡⌋━━➣ </code></pre>")
     input2: Message = await bot.listen(editable.chat.id, filters=filters.text & filters.user(m.from_user.id))
     raw_text2 = input2.text
     quality = f"{raw_text2}p"
@@ -836,10 +862,10 @@ async def text_handler(bot: Client, m: Message):
                 cmd = f'yt-dlp -f "{ytf}" "{url}" -o "{name}.mp4"'
 
             try:
-                cc = f'🎞️𝐓𝐢𝐭𝐥𝐞 » `{name}` [{res}].mp4\n🔗𝐋𝐢𝐧𝐤 » <a href="{link}">__**CLICK HERE**__</a>\n\n🌟𝐄𝐱𝐭𝐫𝐚𝐜𝐭𝐞𝐝 𝐁𝐲 » <b> @SAINI_SAHAB19 </b>'
-                cc1 = f'📕𝐓𝐢𝐭𝐥𝐞 » `{name}`\n🔗𝐋𝐢𝐧𝐤 » <a href="{link}">__**CLICK HERE**__</a>\n\n🌟𝐄𝐱𝐭𝐫𝐚𝐜𝐭𝐞𝐝 𝐁𝐲 » <b> @SAINI_SAHAB19 </b>'
-                ccyt = f'🎞️𝐓𝐢𝐭𝐥𝐞 » `{name}` .mp4\n🔗𝐋𝐢𝐧𝐤 » <a href="{link}">__**Click Here to Watch Stream**__</a>\n\n🌟𝐄𝐱𝐭𝐫𝐚𝐜𝐭𝐞𝐝 𝐁𝐲 » <b> @SAINI_SAHAB19 </b>'
-                cccpvod = f'🎞️𝐓𝐢𝐭𝐥𝐞 » `{name}` .mp4\n<a href="{linkcpvod}">__**Click Here to Watch Stream**__</a>\n🔗𝐋𝐢𝐧𝐤 » {link}\n🌟𝐄𝐱𝐭𝐫𝐚𝐜𝐭𝐞𝐝 𝐁𝐲 » <b> @SAINI_SAHAB19 </b>'
+                cc = f'🎞️𝐓𝐢𝐭𝐥𝐞 » `{name}` [{res}].mp4\n🔗𝐋𝐢𝐧𝐤 » <a href="{link}">__**CLICK HERE**__</a>\n\n🌟𝐄𝐱𝐭𝐫𝐚𝐜𝐭𝐞𝐝 𝐁𝐲 » <b> @Manish_0139 </b>'
+                cc1 = f'📕𝐓𝐢𝐭𝐥𝐞 » `{name}`\n🔗𝐋𝐢𝐧𝐤 » <a href="{link}">__**CLICK HERE**__</a>\n\n🌟𝐄𝐱𝐭𝐫𝐚𝐜𝐭𝐞𝐝 𝐁𝐲 » <b> @Manish_0139 </b>'
+                ccyt = f'🎞️𝐓𝐢𝐭𝐥𝐞 » `{name}` .mp4\n🔗𝐋𝐢𝐧𝐤 » <a href="{link}">__**Click Here to Watch Stream**__</a>\n\n🌟𝐄𝐱𝐭𝐫𝐚𝐜𝐭𝐞𝐝 𝐁𝐲 » <b> @Manish_0139 </b>'
+                cccpvod = f'🎞️𝐓𝐢𝐭𝐥𝐞 » `{name}` .mp4\n<a href="{linkcpvod}">__**Click Here to Watch Stream**__</a>\n🔗𝐋𝐢𝐧𝐤 » {link}\n🌟𝐄𝐱𝐭𝐫𝐚𝐜𝐭𝐞𝐝 𝐁𝐲 » <b> @Manish_0139 </b>'
                 
                 if "drive" in url:
                     try:
@@ -981,7 +1007,7 @@ async def text_handler(bot: Client, m: Message):
                                 
                 else:
                     emoji_message = await show_random_emojis(message)
-                    Show = f"<pre><code>**⚡Dᴏᴡɴʟᴏᴀᴅ Sᴛᴀʀᴛᴇᴅ...⏳**</code></pre>\n🔗𝐋𝐢𝐧𝐤 » `{link}`\n<pre><code>✦𝐁𝐨𝐭 𝐌𝐚𝐝𝐞 𝐁𝐲 ✦ `🇸𝙎𝘼𝙄𝙉𝙄 𝙎𝘼𝙃𝘼𝘽`</code></pre>"
+                    Show = f"<pre><code>**⚡Dᴏᴡɴʟᴏᴀᴅ Sᴛᴀʀᴛᴇᴅ...⏳**</code></pre>\n🔗𝐋𝐢𝐧𝐤 » `{link}`\n<pre><code>✦𝐁𝐨𝐭 𝐌𝐚𝐝𝐞 𝐁𝐲 ✦ `Manish Kumar`</code></pre>"
                     prog = await m.reply_text(Show)
                     res_file = await helper.download_video(url, cmd, name)
                     filename = res_file
@@ -992,7 +1018,7 @@ async def text_handler(bot: Client, m: Message):
                     time.sleep(1)
 
             except Exception as e:
-                    Error= f"<pre><code>⚠️𝐃𝐨𝐰𝐧𝐥𝐨𝐚𝐝𝐢𝐧𝐠 𝐈𝐧𝐭𝐞𝐫𝐮𝐩𝐭𝐞𝐝</code></pre>\n📚𝐓𝐢𝐭𝐥𝐞 » `{name}`\n\n🔗𝐋𝐢𝐧𝐤 » `{link}`\n<pre><code>✦𝐁𝐨𝐭 𝐌𝐚𝐝𝐞 𝐁𝐲 ✦ <b>'𝙎𝘼𝙄𝙉𝙄 𝙎𝘼𝙃𝘼𝘽'</b></code></pre>"
+                    Error= f"<pre><code>⚠️𝐃𝐨𝐰𝐧𝐥𝐨𝐚𝐝𝐢𝐧𝐠 𝐈𝐧𝐭𝐞𝐫𝐮𝐩𝐭𝐞𝐝</code></pre>\n📚𝐓𝐢𝐭𝐥𝐞 » `{name}`\n\n🔗𝐋𝐢𝐧𝐤 » `{link}`\n<pre><code>✦𝐁𝐨𝐭 𝐌𝐚𝐝𝐞 𝐁𝐲 ✦ <b>'Manish Kumar'</b></code></pre>"
                     await m.reply_text(Error)
                     count += 1
                     pass
